@@ -158,21 +158,36 @@
         
         /* ===== 移动端适配 ===== */
         @media screen and (max-width: 768px) {
-            /* 导航栏简化 */
-            nav { height: 48px !important; padding: 0 8px !important; flex-wrap: wrap; }
-            nav > div:first-child { gap: 8px !important; }
-            nav > div:first-child > div:first-child > div:last-child { display: none; } /* 隐藏版本号 */
-            #theme-btns { display: none !important; } /* 隐藏主题切换 */
-            nav .flex.items-center.gap-4:nth-child(2) { display: none; } /* 隐藏TX/RX统计 */
-            #baud-rate { display: none; } /* 隐藏波特率选择 */
-            #btn-upgrade, #btn-slipway { display: none !important; } /* 隐藏升级/滑台 */
+            /* 允许页面滚动 */
+            html, body { 
+                overflow: auto !important; 
+                height: auto !important;
+                min-height: 100vh;
+            }
             
-            /* 主布局改为纵向 */
+            /* 导航栏简化 */
+            nav { 
+                height: auto !important; 
+                min-height: 44px;
+                padding: 6px 8px !important; 
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+            nav > div:first-child { gap: 6px !important; flex-wrap: wrap; }
+            nav > div:first-child > div:first-child > div:last-child { display: none; }
+            #theme-btns { display: none !important; }
+            nav .flex.items-center.gap-4:nth-child(2) { display: none; }
+            #baud-rate { display: none; }
+            #btn-upgrade, #btn-slipway { display: none !important; }
+            
+            /* 主布局改为纵向滚动 */
             main { 
                 flex-direction: column !important; 
                 padding: 4px !important; 
-                gap: 4px !important;
-                height: calc(100vh - 48px) !important;
+                gap: 6px !important;
+                height: auto !important;
+                min-height: calc(100vh - 60px);
+                overflow: visible !important;
             }
             
             /* 隐藏左侧命令面板 */
@@ -181,27 +196,28 @@
             /* 隐藏分隔条 */
             .resizer { display: none !important; }
             
-            /* 日志区域 */
-            #panel-log { 
-                min-width: 100% !important; 
-                width: 100% !important;
-                flex: none !important;
-                height: 35vh !important;
-                order: 2;
-            }
-            
-            /* 波形区域占满 */
+            /* 波形区域 - 放在上面 */
             #panel-wave { 
-                min-width: 100% !important; 
                 width: 100% !important;
-                height: 55vh !important;
+                min-width: 100% !important;
+                height: 50vh !important;
+                min-height: 280px;
                 flex: none !important;
                 order: 1;
             }
             
+            /* 日志区域 - 放在下面 */
+            #panel-log { 
+                width: 100% !important;
+                min-width: 100% !important;
+                height: 45vh !important;
+                min-height: 200px;
+                flex: none !important;
+                order: 2;
+            }
+            
             /* 波形工具栏简化 */
-            #panel-wave > div:first-child { padding: 4px 8px !important; }
-            #panel-wave .flex.gap-0\.5 { gap: 1px !important; }
+            #panel-wave > div:first-child { padding: 4px 6px !important; flex-wrap: wrap; gap: 4px; }
             .chart-tool { width: 28px; height: 28px; }
             
             /* 波形历史隐藏 */
@@ -209,23 +225,38 @@
             #panel-wave .flex-1 > div:last-child { display: none !important; }
             #panel-wave .flex-1 > div:first-child { height: 100% !important; }
             
+            /* 波形底部按钮简化 */
+            #panel-wave > div:last-child { display: none !important; }
+            
             /* 连接按钮更大更易点击 */
             #btn-connect, #btn-ble { 
-                min-width: 60px !important; 
-                height: 36px !important;
-                font-size: 12px !important;
+                min-width: 50px !important; 
+                height: 34px !important;
+                font-size: 11px !important;
+                padding: 0 8px !important;
             }
+            
+            /* 日志标题栏简化 */
+            #panel-log > div:first-child { 
+                height: auto !important; 
+                padding: 6px 8px !important;
+                flex-wrap: wrap;
+                gap: 4px;
+            }
+            #panel-log > div:first-child .flex.items-center.gap-3 { gap: 6px !important; flex-wrap: wrap; }
+            #panel-log > div:first-child label span { font-size: 10px !important; }
             
             /* 底部输入栏 */
             #panel-log > div:last-child { padding: 4px !important; }
-            #panel-log > div:last-child input { height: 36px !important; font-size: 14px !important; }
-            #panel-log > div:last-child button { height: 36px !important; padding: 0 12px !important; }
+            #panel-log > div:last-child input { height: 34px !important; font-size: 14px !important; }
+            #panel-log > div:last-child button { height: 34px !important; padding: 0 10px !important; font-size: 12px !important; }
         }
         
         /* 超小屏幕 (手机竖屏) */
-        @media screen and (max-width: 480px) {
-            nav > div:first-child > div:first-child { display: none; } /* 隐藏Logo */
-            #panel-log { height: 30vh !important; }
+        @media screen and (max-width: 400px) {
+            nav > div:first-child > div:first-child { display: none; }
+            #panel-wave { height: 45vh !important; min-height: 240px; }
+            #panel-log { height: 50vh !important; }
         }
     </style>
 </head>
