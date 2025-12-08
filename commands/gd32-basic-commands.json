@@ -1,0 +1,47 @@
+{
+  "name": "GD32基础调试",
+  "description": "GD32 Bootloader基础调试命令 (CRC已正确计算)",
+  "version": "1.1",
+  "commands": [
+    {
+      "id": "1",
+      "name": "[GD32] 握手",
+      "command": "AA 01 00 04 12 34 56 78 34 81 55",
+      "isHex": true,
+      "interval": 0,
+      "enabled": true
+    },
+    {
+      "id": "2", 
+      "name": "[GD32] 获取设备信息",
+      "command": "AA 02 00 00 00 D0 55",
+      "isHex": true,
+      "interval": 0,
+      "enabled": true
+    },
+    {
+      "id": "3",
+      "name": "[GD32] 进入升级模式", 
+      "command": "AA 03 00 00 C0 81 55",
+      "isHex": true,
+      "interval": 0,
+      "enabled": true
+    },
+    {
+      "id": "4",
+      "name": "[GD32] 擦除Flash",
+      "command": "AA 04 00 08 08 00 20 00 00 03 C0 00 D2 D2 55", 
+      "isHex": true,
+      "interval": 0,
+      "enabled": true
+    },
+    {
+      "id": "5",
+      "name": "[GD32] 重启设备",
+      "command": "AA 07 00 00 01 C0 55", 
+      "isHex": true,
+      "interval": 0,
+      "enabled": true
+    }
+  ]
+}
