@@ -1,0 +1,70 @@
+{
+  "name": "基础测试命令",
+  "description": "常用的基础测试和调试命令",
+  "version": "1.0",
+  "commands": [
+    {
+      "id": "1",
+      "name": "AT测试",
+      "command": "AT",
+      "isHex": false,
+      "interval": 0,
+      "enabled": true,
+      "category": "AT命令"
+    },
+    {
+      "id": "2",
+      "name": "获取版本",
+      "command": "AT+VERSION?",
+      "isHex": false,
+      "interval": 0,
+      "enabled": true,
+      "category": "AT命令"
+    },
+    {
+      "id": "3",
+      "name": "获取MAC地址",
+      "command": "AT+ADDR?",
+      "isHex": false,
+      "interval": 0,
+      "enabled": true,
+      "category": "AT命令"
+    },
+    {
+      "id": "4",
+      "name": "重启模块",
+      "command": "AT+RESET",
+      "isHex": false,
+      "interval": 0,
+      "enabled": true,
+      "category": "AT命令"
+    },
+    {
+      "id": "5",
+      "name": "HEX测试 0x55",
+      "command": "55",
+      "isHex": true,
+      "interval": 0,
+      "enabled": true,
+      "category": "HEX测试"
+    },
+    {
+      "id": "6",
+      "name": "HEX测试 0xAA",
+      "command": "AA",
+      "isHex": true,
+      "interval": 0,
+      "enabled": true,
+      "category": "HEX测试"
+    },
+    {
+      "id": "7",
+      "name": "Hello World",
+      "command": "Hello World",
+      "isHex": false,
+      "interval": 0,
+      "enabled": true,
+      "category": "文本测试"
+    }
+  ]
+}

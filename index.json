@@ -1,0 +1,69 @@
+{
+  "title": "命令配置库",
+  "description": "所有可用的命令配置文件",
+  "version": "1.0",
+  "lastUpdated": "2025-11-26",
+  "configs": [
+    {
+      "id": "gd32_basic",
+      "name": "GD32基础调试",
+      "file": "gd32-basic-commands.json",
+      "description": "GD32 Bootloader基础调试命令",
+      "category": "MCU调试",
+      "icon": "microchip",
+      "recommended": true
+    },
+    {
+      "id": "gd32_full",
+      "name": "GD32完整调试",
+      "file": "gd32-bootloader-commands.json", 
+      "description": "GD32 Bootloader完整功能命令集",
+      "category": "MCU调试",
+      "icon": "microchip",
+      "advanced": true
+    },
+    {
+      "id": "green_laser",
+      "name": "绿光测距仪调试",
+      "file": "green-laser-debug.json",
+      "description": "绿光测距仪全部调试命令(42条)",
+      "category": "激光设备",
+      "icon": "crosshairs",
+      "recommended": true
+    },
+    {
+      "id": "laser_waveform",
+      "name": "激光波形测试",
+      "file": "laser-waveform-commands.json",
+      "description": "激光设备波形打印和相位测试",
+      "category": "激光设备",
+      "icon": "wave-square",
+      "default": true
+    },
+    {
+      "id": "basic_test",
+      "name": "基础测试命令",
+      "file": "basic-test-commands.json",
+      "description": "AT命令、HEX测试等基础功能",
+      "category": "通用测试",
+      "icon": "terminal"
+    }
+  ],
+  "categories": [
+    {
+      "id": "mcu_debug",
+      "name": "MCU调试",
+      "description": "单片机固件调试相关命令"
+    },
+    {
+      "id": "laser_device", 
+      "name": "激光设备",
+      "description": "激光设备专用测试命令"
+    },
+    {
+      "id": "general_test",
+      "name": "通用测试", 
+      "description": "通用的测试和调试命令"
+    }
+  ]
+}

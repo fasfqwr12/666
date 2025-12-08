@@ -1,0 +1,109 @@
+{
+  "name": "GD32 Bootloader调试命令",
+  "description": "GD32F303 Bootloader固件升级调试命令集",
+  "version": "1.0",
+  "author": "GD32开发团队",
+  "created": "2025-11-26",
+  "commands": [
+    {
+      "id": "gd32_handshake",
+      "name": "[GD32] 握手",
+      "command": "AA 01 00 04 12 34 56 78 34 81 55",
+      "description": "与bootloader建立握手连接，发送魔数0x12345678",
+      "isHex": true,
+      "interval": 0,
+      "enabled": true,
+      "category": "基础通信"
+    },
+    {
+      "id": "gd32_get_info",
+      "name": "[GD32] 获取设备信息",
+      "command": "AA 02 00 00 C1 C1 55",
+      "description": "获取设备ID、版本、Flash大小等信息",
+      "isHex": true,
+      "interval": 0,
+      "enabled": true,
+      "category": "设备信息"
+    },
+    {
+      "id": "gd32_enter_upgrade",
+      "name": "[GD32] 进入升级模式",
+      "command": "AA 03 00 00 81 C0 55",
+      "description": "切换到固件升级模式",
+      "isHex": true,
+      "interval": 0,
+      "enabled": true,
+      "category": "升级控制"
+    },
+    {
+      "id": "gd32_erase_flash",
+      "name": "[GD32] 擦除Flash",
+      "command": "AA 04 00 08 08 00 20 00 00 03 C0 00 C4 C4 55",
+      "description": "擦除应用区Flash (0x08002000, 240KB)",
+      "isHex": true,
+      "interval": 0,
+      "enabled": true,
+      "category": "Flash操作"
+    },
+    {
+      "id": "gd32_write_test",
+      "name": "[GD32] 写入测试数据",
+      "command": "AA 05 01 04 08 00 20 00",
+      "description": "写入256字节测试数据到0x08002000 (需要添加实际数据)",
+      "isHex": true,
+      "interval": 0,
+      "enabled": false,
+      "category": "Flash操作"
+    },
+    {
+      "id": "gd32_verify",
+      "name": "[GD32] 校验固件",
+      "command": "AA 06 00 10 08 00 20 00 00 00 B4 00 AA BB CC DD 01 00 00 00",
+      "description": "校验固件完整性 (需要实际CRC32)",
+      "isHex": true,
+      "interval": 0,
+      "enabled": false,
+      "category": "校验"
+    },
+    {
+      "id": "gd32_reset",
+      "name": "[GD32] 重启设备",
+      "command": "AA 07 00 00 01 C1 55",
+      "description": "重启设备，跳转到新固件",
+      "isHex": true,
+      "interval": 0,
+      "enabled": true,
+      "category": "系统控制"
+    },
+    {
+      "id": "gd32_test_sequence",
+      "name": "[GD32] 完整测试序列",
+      "command": "SEQUENCE",
+      "description": "自动执行: 握手→获取信息→进入升级模式",
+      "isHex": false,
+      "interval": 1000,
+      "enabled": true,
+      "category": "自动化",
+      "sequence": [
+        "gd32_handshake",
+        "gd32_get_info", 
+        "gd32_enter_upgrade"
+      ]
+    }
+  ],
+  "protocol": {
+    "name": "GD32 Bootloader Protocol",
+    "frameFormat": "AA CMD LEN_H LEN_L [DATA...] CRC_H CRC_L 55",
+    "baudRate": 460800,
+    "responseFormat": "AA (CMD|0x80) LEN_H LEN_L [DATA...] CRC_H CRC_L 55",
+    "crcAlgorithm": "CRC16-MODBUS",
+    "timeout": 5000
+  },
+  "deviceInfo": {
+    "mcu": "GD32F303RCT6",
+    "flashSize": "256KB",
+    "bootloaderSize": "8KB",
+    "appStartAddr": "0x08002000",
+    "appMaxSize": "240KB"
+  }
+}
