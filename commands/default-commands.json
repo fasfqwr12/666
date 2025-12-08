@@ -1,0 +1,19 @@
+{
+  "name": "默认配置",
+  "description": "基础波形测试命令",
+  "version": "1.0",
+  "commands": [
+    { "id": "1", "name": "打印2M5波形", "command": "aaee a0 00000000 a0 bbff", "isHex": true, "interval": 1000, "enabled": true },
+    { "id": "2", "name": "打印6M波形", "command": "aaee a1 00000000 a1 bbff", "isHex": true, "interval": 1000, "enabled": true },
+    { "id": "3", "name": "打印7M波形", "command": "aaee a2 00000000 a2 bbff", "isHex": true, "interval": 1000, "enabled": true },
+    { "id": "4", "name": "打印60M波形", "command": "aaee a3 00000000 a3 bbff", "isHex": true, "interval": 1000, "enabled": true },
+    { "id": "5", "name": "打印70M波形", "command": "aaee a4 00000000 a4 bbff", "isHex": true, "interval": 1000, "enabled": true },
+    { "id": "6", "name": "打印80M波形", "command": "aaee a5 00000000 a5 bbff", "isHex": true, "interval": 1000, "enabled": true },
+    { "id": "7", "name": "打印90M波形", "command": "aaee a6 00000000 a6 bbff", "isHex": true, "interval": 1000, "enabled": true },
+    { "id": "8", "name": "LD+0.5", "command": "aaee a7 00000000 a7 bbff", "isHex": true, "interval": 1000, "enabled": true },
+    { "id": "9", "name": "LD-0.5", "command": "aaee a8 00000000 a8 bbff", "isHex": true, "interval": 1000, "enabled": true },
+    { "id": "10", "name": "APD+1", "command": "aaee a9 00000000 a9 bbff", "isHex": true, "interval": 0, "enabled": true },
+    { "id": "11", "name": "APD+2", "command": "aaee aa 00000000 aa bbff", "isHex": true, "interval": 0, "enabled": true },
+    { "id": "12", "name": "APD+10", "command": "aaee ab 00000000 ab bbff", "isHex": true, "interval": 0, "enabled": true }
+  ]
+}
