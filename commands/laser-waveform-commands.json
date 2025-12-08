@@ -1,0 +1,140 @@
+{
+  "name": "激光波形测试命令",
+  "description": "激光设备波形打印和相位测试命令集",
+  "version": "1.0",
+  "author": "激光设备团队",
+  "created": "2025-11-26",
+  "commands": [
+    {
+      "id": "1",
+      "name": "打印2M5波形",
+      "command": "aaee a0 00000000 a0 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": true,
+      "category": "波形打印"
+    },
+    {
+      "id": "2", 
+      "name": "打印6M波形",
+      "command": "aaee a1 00000000 a1 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": true,
+      "category": "波形打印"
+    },
+    {
+      "id": "3",
+      "name": "打印7M波形",
+      "command": "aaee a2 00000000 a2 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": true,
+      "category": "波形打印"
+    },
+    {
+      "id": "4",
+      "name": "打印60M波形",
+      "command": "aaee a3 00000000 a3 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": false,
+      "category": "波形打印"
+    },
+    {
+      "id": "5",
+      "name": "打印70M波形", 
+      "command": "aaee a4 00000000 a4 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": false,
+      "category": "波形打印"
+    },
+    {
+      "id": "6",
+      "name": "打印80M波形",
+      "command": "aaee a5 00000000 a5 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": false,
+      "category": "波形打印"
+    },
+    {
+      "id": "7",
+      "name": "打印90M波形",
+      "command": "aaee a6 00000000 a6 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": false,
+      "category": "波形打印"
+    },
+    {
+      "id": "8",
+      "name": "2M5相位测试",
+      "command": "aaee 01 00000000 01 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": false,
+      "category": "相位测试"
+    },
+    {
+      "id": "9",
+      "name": "6M相位测试",
+      "command": "aaee 09 00000000 09 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": false,
+      "category": "相位测试"
+    },
+    {
+      "id": "10",
+      "name": "35M相位测试",
+      "command": "aaee 03 00000000 03 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": false,
+      "category": "相位测试"
+    },
+    {
+      "id": "11",
+      "name": "64M相位测试",
+      "command": "aaee 04 00000000 04 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": false,
+      "category": "相位测试"
+    },
+    {
+      "id": "12",
+      "name": "70M相位测试",
+      "command": "aaee 05 00000000 05 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": false,
+      "category": "相位测试"
+    },
+    {
+      "id": "13",
+      "name": "80M相位测试",
+      "command": "aaee 06 00000000 06 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": false,
+      "category": "相位测试"
+    },
+    {
+      "id": "14",
+      "name": "90M相位测试",
+      "command": "aaee 07 00000000 07 bbff",
+      "isHex": true,
+      "interval": 1000,
+      "enabled": false,
+      "category": "相位测试"
+    }
+  ],
+  "protocol": {
+    "name": "Laser Device Protocol",
+    "frameFormat": "aaee CMD DATA CRC bbff",
+    "description": "激光设备专用通信协议"
+  }
+}
