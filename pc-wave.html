@@ -157,107 +157,19 @@
         body,main{max-width:none!important;margin:0!important}
         main{width:100%!important}
         
-        /* ===== 移动端适配 ===== */
-        @media screen and (max-width: 768px) {
-            /* 允许页面滚动 */
+        /* ===== 移动端：保持PC布局，只允许滚动 ===== */
+        @media screen and (max-width: 1200px) {
             html, body { 
                 overflow: auto !important; 
                 height: auto !important;
-                min-height: 100vh;
+                width: auto !important;
             }
-            
-            /* 导航栏简化 */
-            nav { 
-                height: auto !important; 
-                min-height: 44px;
-                padding: 6px 8px !important; 
-                flex-wrap: wrap;
-                gap: 6px;
-            }
-            nav > div:first-child { gap: 6px !important; flex-wrap: wrap; }
-            nav > div:first-child > div:first-child > div:last-child { display: none; }
-            #theme-btns { display: none !important; }
-            nav .flex.items-center.gap-4:nth-child(2) { display: none; }
-            #baud-rate { display: none; }
-            #btn-upgrade, #btn-slipway { display: none !important; }
-            
-            /* 主布局改为纵向滚动 */
-            main { 
-                flex-direction: column !important; 
-                padding: 4px !important; 
-                gap: 6px !important;
+            main {
+                overflow: auto !important;
                 height: auto !important;
-                min-height: calc(100vh - 60px);
-                overflow: visible !important;
+                min-height: 100vh;
+                min-width: 1200px; /* 保持PC最小宽度 */
             }
-            
-            /* 隐藏左侧命令面板 */
-            #panel-cmd { display: none !important; }
-            
-            /* 隐藏分隔条 */
-            .resizer { display: none !important; }
-            
-            /* 波形区域 - 放在上面 */
-            #panel-wave { 
-                width: 100% !important;
-                min-width: 100% !important;
-                height: 50vh !important;
-                min-height: 280px;
-                flex: none !important;
-                order: 1;
-            }
-            
-            /* 日志区域 - 放在下面 */
-            #panel-log { 
-                width: 100% !important;
-                min-width: 100% !important;
-                height: 45vh !important;
-                min-height: 200px;
-                flex: none !important;
-                order: 2;
-            }
-            
-            /* 波形工具栏简化 */
-            #panel-wave > div:first-child { padding: 4px 6px !important; flex-wrap: wrap; gap: 4px; }
-            .chart-tool { width: 28px; height: 28px; }
-            
-            /* 波形历史隐藏 */
-            #wave-history-list { display: none !important; }
-            #panel-wave .flex-1 > div:last-child { display: none !important; }
-            #panel-wave .flex-1 > div:first-child { height: 100% !important; }
-            
-            /* 波形底部按钮简化 */
-            #panel-wave > div:last-child { display: none !important; }
-            
-            /* 连接按钮更大更易点击 */
-            #btn-connect, #btn-ble { 
-                min-width: 50px !important; 
-                height: 34px !important;
-                font-size: 11px !important;
-                padding: 0 8px !important;
-            }
-            
-            /* 日志标题栏简化 */
-            #panel-log > div:first-child { 
-                height: auto !important; 
-                padding: 6px 8px !important;
-                flex-wrap: wrap;
-                gap: 4px;
-            }
-            #panel-log > div:first-child .flex.items-center.gap-3 { gap: 6px !important; flex-wrap: wrap; }
-            #panel-log > div:first-child label span { font-size: 10px !important; }
-            
-            /* 底部输入栏 */
-            #panel-log > div:last-child { padding: 4px !important; }
-            #panel-log > div:last-child input { height: 34px !important; font-size: 14px !important; }
-            #panel-log > div:last-child button { height: 34px !important; padding: 0 10px !important; font-size: 12px !important; }
-        }
-        
-        /* 超小屏幕 (手机竖屏) */
-        @media screen and (max-width: 400px) {
-            nav > div:first-child > div:first-child { display: none; }
-            #panel-wave { height: 45vh !important; min-height: 240px; }
-            #panel-log { height: 50vh !important; }
         }
     </style>
 </head>
