@@ -155,6 +155,72 @@
         /* 强制全屏 */
         body,main{max-width:none!important;margin:0!important}
         main{width:100%!important}
+        
+        /* ===== 移动端适配 ===== */
+        @media screen and (max-width: 768px) {
+            /* 导航栏简化 */
+            nav { height: 48px !important; padding: 0 8px !important; flex-wrap: wrap; }
+            nav > div:first-child { gap: 8px !important; }
+            nav > div:first-child > div:first-child > div:last-child { display: none; } /* 隐藏版本号 */
+            #theme-btns { display: none !important; } /* 隐藏主题切换 */
+            nav .flex.items-center.gap-4:nth-child(2) { display: none; } /* 隐藏TX/RX统计 */
+            #baud-rate { display: none; } /* 隐藏波特率选择 */
+            #btn-upgrade, #btn-slipway { display: none !important; } /* 隐藏升级/滑台 */
+            
+            /* 主布局改为纵向 */
+            main { 
+                flex-direction: column !important; 
+                padding: 4px !important; 
+                gap: 4px !important;
+                height: calc(100vh - 48px) !important;
+            }
+            
+            /* 隐藏左侧命令面板 */
+            #panel-cmd { display: none !important; }
+            
+            /* 隐藏分隔条 */
+            .resizer { display: none !important; }
+            
+            /* 日志区域 */
+            #panel-log { 
+                min-width: 100% !important; 
+                width: 100% !important;
+                flex: none !important;
+                height: 35vh !important;
+                order: 2;
+            }
+            
+            /* 波形区域占满 */
+            #panel-chart { 
+                min-width: 100% !important; 
+                width: 100% !important;
+                flex: 1 !important;
+                order: 1;
+            }
+            
+            /* 波形工具栏简化 */
+            #chart-header { padding: 4px 8px !important; height: 40px !important; }
+            #chart-header .flex.gap-1 { gap: 2px !important; }
+            .chart-tool { width: 32px; height: 32px; }
+            
+            /* 连接按钮更大更易点击 */
+            #btn-connect, #btn-ble { 
+                min-width: 60px !important; 
+                height: 36px !important;
+                font-size: 12px !important;
+            }
+            
+            /* 底部输入栏 */
+            #panel-log > div:last-child { padding: 4px !important; }
+            #panel-log > div:last-child input { height: 36px !important; font-size: 14px !important; }
+            #panel-log > div:last-child button { height: 36px !important; padding: 0 12px !important; }
+        }
+        
+        /* 超小屏幕 (手机竖屏) */
+        @media screen and (max-width: 480px) {
+            nav > div:first-child > div:first-child { display: none; } /* 隐藏Logo */
+            #panel-log { height: 30vh !important; }
+        }
     </style>
 </head>
 <body class="flex flex-col">
