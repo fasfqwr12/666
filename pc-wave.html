@@ -191,17 +191,23 @@
             }
             
             /* 波形区域占满 */
-            #panel-chart { 
+            #panel-wave { 
                 min-width: 100% !important; 
                 width: 100% !important;
-                flex: 1 !important;
+                height: 55vh !important;
+                flex: none !important;
                 order: 1;
             }
             
             /* 波形工具栏简化 */
-            #chart-header { padding: 4px 8px !important; height: 40px !important; }
-            #chart-header .flex.gap-1 { gap: 2px !important; }
-            .chart-tool { width: 32px; height: 32px; }
+            #panel-wave > div:first-child { padding: 4px 8px !important; }
+            #panel-wave .flex.gap-0\.5 { gap: 1px !important; }
+            .chart-tool { width: 28px; height: 28px; }
+            
+            /* 波形历史隐藏 */
+            #wave-history-list { display: none !important; }
+            #panel-wave .flex-1 > div:last-child { display: none !important; }
+            #panel-wave .flex-1 > div:first-child { height: 100% !important; }
             
             /* 连接按钮更大更易点击 */
             #btn-connect, #btn-ble { 
