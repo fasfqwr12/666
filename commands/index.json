@@ -1,69 +1,78 @@
 {
-  "title": "命令配置库",
-  "description": "所有可用的命令配置文件",
-  "version": "1.0",
-  "lastUpdated": "2025-11-26",
+  "title": "鍛戒护閰嶇疆搴?,
+  "description": "鎵€鏈夊彲鐢ㄧ殑鍛戒护閰嶇疆鏂囦欢",
+  "version": "1.2",
+  "lastUpdated": "2026-04-22",
   "configs": [
     {
       "id": "gd32_basic",
-      "name": "GD32基础调试",
+      "name": "GD32鍩虹璋冭瘯",
       "file": "gd32-basic-commands.json",
-      "description": "GD32 Bootloader基础调试命令",
-      "category": "MCU调试",
+      "description": "GD32 Bootloader鍩虹璋冭瘯鍛戒护",
+      "category": "MCU璋冭瘯",
       "icon": "microchip",
       "recommended": true
     },
     {
       "id": "gd32_full",
-      "name": "GD32完整调试",
-      "file": "gd32-bootloader-commands.json", 
-      "description": "GD32 Bootloader完整功能命令集",
-      "category": "MCU调试",
+      "name": "GD32瀹屾暣璋冭瘯",
+      "file": "gd32-bootloader-commands.json",
+      "description": "GD32 Bootloader瀹屾暣鍔熻兘鍛戒护闆?,
+      "category": "MCU璋冭瘯",
       "icon": "microchip",
       "advanced": true
     },
     {
       "id": "green_laser",
-      "name": "绿光测距仪调试",
+      "name": "缁垮厜娴嬭窛浠皟璇?,
       "file": "green-laser-debug.json",
-      "description": "绿光测距仪全部调试命令(42条)",
-      "category": "激光设备",
+      "description": "缁垮厜娴嬭窛浠叏閮ㄨ皟璇曞懡浠?42鏉?",
+      "category": "婵€鍏夎澶?,
+      "icon": "crosshairs",
+      "recommended": true
+    },
+    {
+      "id": "red_laser_150m",
+      "name": "绾㈠厜150m娴嬭窛浠?J2N4A-150)",
+      "file": "red-laser-150m-commands.json",
+      "description": "J2N4A-150绾㈠厜150m鐩镐綅娴嬭窛浠畬鏁磋皟璇曞懡浠?37鏉?",
+      "category": "婵€鍏夎澶?,
       "icon": "crosshairs",
       "recommended": true
     },
     {
       "id": "laser_waveform",
-      "name": "激光波形测试",
+      "name": "婵€鍏夋尝褰㈡祴璇?,
       "file": "laser-waveform-commands.json",
-      "description": "激光设备波形打印和相位测试",
-      "category": "激光设备",
+      "description": "婵€鍏夎澶囨尝褰㈡墦鍗板拰鐩镐綅娴嬭瘯",
+      "category": "婵€鍏夎澶?,
       "icon": "wave-square",
       "default": true
     },
     {
       "id": "basic_test",
-      "name": "基础测试命令",
+      "name": "鍩虹娴嬭瘯鍛戒护",
       "file": "basic-test-commands.json",
-      "description": "AT命令、HEX测试等基础功能",
-      "category": "通用测试",
+      "description": "AT鍛戒护銆丠EX娴嬭瘯绛夊熀纭€鍔熻兘",
+      "category": "閫氱敤娴嬭瘯",
       "icon": "terminal"
     }
   ],
   "categories": [
     {
       "id": "mcu_debug",
-      "name": "MCU调试",
-      "description": "单片机固件调试相关命令"
+      "name": "MCU璋冭瘯",
+      "description": "鍗曠墖鏈哄浐浠惰皟璇曠浉鍏冲懡浠?
     },
     {
-      "id": "laser_device", 
-      "name": "激光设备",
-      "description": "激光设备专用测试命令"
+      "id": "laser_device",
+      "name": "婵€鍏夎澶?,
+      "description": "婵€鍏夎澶囦笓鐢ㄦ祴璇曞懡浠?
     },
     {
       "id": "general_test",
-      "name": "通用测试", 
-      "description": "通用的测试和调试命令"
+      "name": "閫氱敤娴嬭瘯",
+      "description": "閫氱敤鐨勬祴璇曞拰璋冭瘯鍛戒护"
     }
   ]
 }
