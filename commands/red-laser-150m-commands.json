@@ -1,0 +1,76 @@
+{
+  "name": "红光150m测距仪(J2N4A-150)",
+  "description": "J2N4A-150 红光150m测距仪完整调试命令集 - 基于cmdanalyse.c CMDS表",
+  "version": "1.0",
+  "author": "J2N4A-150",
+  "created": "2026-04-22",
+  "commands": [
+    { "id": "1",  "name": "频率1(159M)波形采集", "command": "AA EE A0 00 00 00 00 A0 BB FF", "isHex": true, "interval": 500,  "enabled": true,  "category": "波形采集" },
+    { "id": "2",  "name": "频率2(134M)波形采集", "command": "AA EE A1 00 00 00 00 A1 BB FF", "isHex": true, "interval": 500,  "enabled": true,  "category": "波形采集" },
+    { "id": "3",  "name": "频率3(160M)波形采集", "command": "AA EE A2 00 00 00 00 A2 BB FF", "isHex": true, "interval": 500,  "enabled": true,  "category": "波形采集" },
+    { "id": "4",  "name": "频率4(129M)波形采集", "command": "AA EE A3 00 00 00 00 A3 BB FF", "isHex": true, "interval": 500,  "enabled": true,  "category": "波形采集" },
+
+    { "id": "5",  "name": "APD +2",              "command": "AA EE A4 00 00 00 00 A4 BB FF", "isHex": true, "interval": 100,  "enabled": true,  "category": "APD调节" },
+    { "id": "6",  "name": "APD -2",              "command": "AA EE A5 00 00 00 00 A5 BB FF", "isHex": true, "interval": 100,  "enabled": true,  "category": "APD调节" },
+
+    { "id": "7",  "name": "滤波次数+2",          "command": "AA EE A6 00 00 00 00 A6 BB FF", "isHex": true, "interval": 100,  "enabled": true,  "category": "滤波调节" },
+    { "id": "8",  "name": "滤波次数-1",          "command": "AA EE A7 00 00 00 00 A7 BB FF", "isHex": true, "interval": 100,  "enabled": true,  "category": "滤波调节" },
+
+    { "id": "9",  "name": "频率1(159M)相位测试",  "command": "AA EE A8 00 00 00 00 A8 BB FF", "isHex": true, "interval": 1000, "enabled": false, "category": "相位测试" },
+    { "id": "10", "name": "频率2(134M)相位测试",  "command": "AA EE A9 00 00 00 00 A9 BB FF", "isHex": true, "interval": 1000, "enabled": false, "category": "相位测试" },
+    { "id": "11", "name": "频率3(160M)相位测试",  "command": "AA EE AA 00 00 00 00 AA BB FF", "isHex": true, "interval": 1000, "enabled": false, "category": "相位测试" },
+    { "id": "12", "name": "频率4(129M)相位测试",  "command": "AA EE AB 00 00 00 00 AB BB FF", "isHex": true, "interval": 1000, "enabled": false, "category": "相位测试" },
+
+    { "id": "13", "name": "搜索APD",              "command": "AA EE AC 00 00 00 00 AC BB FF", "isHex": true, "interval": 2000, "enabled": true,  "category": "APD调节" },
+    { "id": "14", "name": "1.8mW内光路切换",      "command": "AA EE AD 00 00 00 00 AD BB FF", "isHex": true, "interval": 200,  "enabled": true,  "category": "激光控制" },
+    { "id": "15", "name": "0.8mW外光路切换",      "command": "AA EE AE 00 00 00 00 AE BB FF", "isHex": true, "interval": 200,  "enabled": true,  "category": "激光控制" },
+
+    { "id": "16", "name": "读取校准数据",          "command": "AA EE 01 00 00 00 00 01 BB FF", "isHex": true, "interval": 500,  "enabled": true,  "category": "校准" },
+    { "id": "17", "name": "相位校准",              "command": "AA EE 02 00 00 00 00 02 BB FF", "isHex": true, "interval": 2000, "enabled": true,  "category": "校准" },
+    { "id": "18", "name": "速度校准",              "command": "AA EE 09 00 00 00 00 09 BB FF", "isHex": true, "interval": 2000, "enabled": true,  "category": "校准" },
+    { "id": "19", "name": "设备号校准",            "command": "AA EE 90 00 00 00 00 90 BB FF", "isHex": true, "interval": 2000, "enabled": true,  "category": "校准" },
+
+    { "id": "20", "name": "内光路校准",            "command": "AA EE 04 00 00 00 00 04 BB FF", "isHex": true, "interval": 2000, "enabled": true,  "category": "校准" },
+    { "id": "21", "name": "内光路校准结束",        "command": "AA EE 05 00 00 00 00 05 BB FF", "isHex": true, "interval": 200,  "enabled": true,  "category": "校准" },
+
+    { "id": "22", "name": "切换调试模式",          "command": "AA EE 03 00 00 00 00 03 BB FF", "isHex": true, "interval": 200,  "enabled": true,  "category": "模式切换" },
+    { "id": "23", "name": "测量数据",              "command": "AA EE 0C 00 00 00 00 0C BB FF", "isHex": true, "interval": 500,  "enabled": true,  "category": "测量" },
+    { "id": "24", "name": "拟合测试",              "command": "AA EE CC 00 00 00 00 CC BB FF", "isHex": true, "interval": 5000, "enabled": true,  "category": "测量" },
+    { "id": "25", "name": "模式测试",              "command": "AA EE BC 00 00 00 00 BC BB FF", "isHex": true, "interval": 2000, "enabled": false, "category": "测量" },
+
+    { "id": "26", "name": "温度校准",              "command": "AA EE 11 00 00 00 00 11 BB FF", "isHex": true, "interval": 2000, "enabled": true,  "category": "校准" },
+    { "id": "27", "name": "温度检查",              "command": "AA EE 12 00 00 00 00 12 BB FF", "isHex": true, "interval": 500,  "enabled": true,  "category": "校准" },
+
+    { "id": "28", "name": "0.8mW外光路开启",       "command": "AA EE 13 00 00 00 00 13 BB FF", "isHex": true, "interval": 200,  "enabled": true,  "category": "激光控制" },
+    { "id": "29", "name": "发射开启",              "command": "AA EE D1 00 00 00 00 D1 BB FF", "isHex": true, "interval": 200,  "enabled": true,  "category": "激光控制" },
+    { "id": "30", "name": "发射关闭",              "command": "AA EE D2 00 00 00 00 D2 BB FF", "isHex": true, "interval": 200,  "enabled": true,  "category": "激光控制" },
+    { "id": "31", "name": "测距(带校准)",          "command": "AA EE D3 00 00 00 00 D3 BB FF", "isHex": true, "interval": 500,  "enabled": true,  "category": "测量" },
+
+    { "id": "32", "name": "设置波特率",            "command": "AA EE D4 00 00 00 00 D4 BB FF", "isHex": true, "interval": 500,  "enabled": false, "category": "串口设置" },
+    { "id": "33", "name": "获取波特率",            "command": "AA EE D5 00 00 00 00 D5 BB FF", "isHex": true, "interval": 200,  "enabled": true,  "category": "串口设置" },
+    { "id": "34", "name": "后端基准",              "command": "AA EE D6 00 00 00 00 D6 BB FF", "isHex": true, "interval": 200,  "enabled": true,  "category": "基准设置" },
+    { "id": "35", "name": "前端基准",              "command": "AA EE D7 00 00 00 00 D7 BB FF", "isHex": true, "interval": 200,  "enabled": true,  "category": "基准设置" },
+
+    { "id": "36", "name": "查看硬件版本",          "command": "AA EE D8 01 00 00 00 D8 BB FF", "isHex": true, "interval": 200,  "enabled": true,  "category": "版本信息" },
+    { "id": "37", "name": "查看软件版本",          "command": "AA EE D9 01 00 00 00 D9 BB FF", "isHex": true, "interval": 200,  "enabled": true,  "category": "版本信息" }
+  ],
+  "protocol": {
+    "name": "J2N4A-150 Phase Ranging Protocol",
+    "frameFormat": "AA EE CMD DATA[4] XOR BB FF",
+    "header": "AA EE",
+    "footer": "BB FF",
+    "commandByte": "Rxbuffer[2]",
+    "dataBytes": "Rxbuffer[3..6] (4 bytes, big-endian u32)",
+    "xorCheck": "Rxbuffer[7] = CMD ^ DATA[0] ^ DATA[1] ^ DATA[2] ^ DATA[3]",
+    "description": "J2N4A-150红光150m相位测距仪串口协议, 4频率(159M/134M/160M/129M)相位测距, USART0 DMA收发"
+  },
+  "device": {
+    "model": "J2N4A-150",
+    "type": "红光相位测距仪",
+    "range": "150m",
+    "mcu": "GD32F303",
+    "frequencies": ["159MHz", "134MHz", "160MHz", "129MHz"],
+    "hardwareVersion": "J2N4A-150PCBV1.1",
+    "interface": "USART0 (PA9-TX, PA10-RX), default 38400bps"
+  }
+}
